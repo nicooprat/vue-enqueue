@@ -54,3 +54,47 @@ export default {
 ```
 
 <GettingStartedDemo />
+
+
+## Namespaces
+
+When multiple queues are needed, namespaced queues are here to help (default is `'default'`):
+
+```vue{7-9,11-13,15-17}
+<template>
+  <div>
+    <el-button type="primary" @click="isDialog1Visible = isDialog2Visible = true">
+      Open both dialogs
+    </el-button>
+
+    <Enqueue namespace="red">
+      <el-dialog v-if="isDialog1Visible" visible title="Dialog 1" @close="isDialog1Visible = false">...</el-dialog>
+    </Enqueue>
+
+    <Enqueue namespace="red">
+      <el-dialog v-if="isDialog2Visible" visible title="Dialog 2" @close="isDialog2Visible = false">...</el-dialog>
+    </Enqueue>
+
+    <Enqueue namespace="blue">
+      <el-dialog v-if="isDialog3Visible" visible title="Dialog 3" @close="isDialog3Visible = false">...</el-dialog>
+    </Enqueue>
+  </div>
+</template>
+
+<script>
+import { Enqueue } from 'vue-enqueue'
+
+export default {
+  components: {
+    Enqueue,
+  },
+  data: () => ({
+    isDialog1Visible: false,
+    isDialog2Visible: false,
+    isDialog3Visible: false,
+  }),
+}
+</script>
+```
+
+<NamespaceDemo />
