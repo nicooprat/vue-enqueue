@@ -1,26 +1,31 @@
 const { $, _ } = Cypress
 
-describe('defaults behavior with 2 dialogs', () => {
+describe('defaults behavior with 2 enqueued components', () => {
   beforeEach(() => {
     cy.visit('/defaults')
   })
 
-  it('display dialogs one after the other', () => {
-    // Open dialogs
-    $('.el-button--primary').click()
-    cy.get('.el-dialog__title').should(title => {
-      // Only first dialog should be displayed
-      expect(title).to.have.length(1)
-      expect(title).to.contain('Dialog 1')
-    })
-    .then(() => {
-      // Close first dialog
-      $('.el-dialog__headerbtn').click()
-      cy.get('.el-dialog__title').should(title => {
-        // Only second dialog should be displayed
-        expect(title).to.have.length(1)
-        expect(title).to.contain('Dialog 2')
-      })
-    })
+  it('show components one after the other', () => {
+    // No test should exist
+    cy.get('[data-cy="button2"]').should('not.exist')
+    cy.get('[data-cy="button3"]').should('not.exist')
+
+    // Show both tests
+    cy.get('[data-cy="button1"]').click()
+    // Only first test should exist
+    cy.get('[data-cy="button2"]').should('exist')
+    cy.get('[data-cy="button3"]').should('not.exist')
+
+    // Hide first test
+    cy.get('[data-cy="button2"]').click()
+    // Only second test should exist
+    cy.get('[data-cy="button2"]').should('not.exist')
+    cy.get('[data-cy="button3"]').should('exist')
+
+    // Hide second test
+    cy.get('[data-cy="button3"]').click()
+    // No test should exist
+    cy.get('[data-cy="button2"]').should('not.exist')
+    cy.get('[data-cy="button3"]').should('not.exist')
   })
 })
