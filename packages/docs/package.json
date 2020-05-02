@@ -7,11 +7,9 @@
     "build": "vuepress build src"
   },
   "dependencies": {
-    "element-ui": "^2.13.1",
-    "vue-mq": "^1.0.1"
+    "element-ui": "^2.13.1"
   },
   "devDependencies": {
-    "core-js": "^2.6.11",
     "vuepress": "^1.4.1"
   }
 }
