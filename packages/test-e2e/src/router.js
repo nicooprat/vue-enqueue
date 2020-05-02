@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from './views/Home.vue'
 import Defaults from './views/Defaults.vue'
-import Responsive from './views/Responsive.vue'
+import Namespace from './views/Namespace.vue'
 
 Vue.use(VueRouter)
 
@@ -16,8 +16,8 @@ const routes = [
     component: Defaults,
   },
   {
-    path: '/responsive',
-    component: Responsive,
+    path: '/namespace',
+    component: Namespace,
   },
 ]
 

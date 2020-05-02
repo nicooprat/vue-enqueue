@@ -1,29 +1,26 @@
 const { $, _ } = Cypress
 
-describe('defaults behavior with 3 enqueue', () => {
+describe('defaults behavior with 2 dialogs', () => {
   beforeEach(() => {
     cy.visit('/defaults')
   })
 
-  it('creates right amount of enqueue', () => {
-    cy.get('.parent').should('exist').should('have.length', 1)
-    cy.get('.parent > *').should('exist').should('have.length', 3)
-  })
-
-  it('dispatches children evenly', () => {
-    cy.get('.child').should('have.length', 12)
-    const texts = ["1", "4", "7", "10", "2", "5", "8", "11", "3", "6", "9", "12"]
-    cy.get('.child').then(($children) => {
-      _.each($children.get(), (child, i) => {
-        expect($(child).text()).to.eq(texts[i])
-      })
+  it('display dialogs one after the other', () => {
+    // Open dialogs
+    $('.el-button--primary').click()
+    cy.get('.el-dialog__title').should(title => {
+      // Only first dialog should be displayed
+      expect(title).to.have.length(1)
+      expect(title).to.contain('Dialog 1')
     })
-  })
-
-  it('has equal enqueue widths', () => {
-    cy.get('.parent > *').then(($enqueue) => {
-      const widths = _.map($enqueue.get(), (column, i) => $(column).width())
-      expect(_.uniq(widths).length).to.eq(1)
+    .then(() => {
+      // Close first dialog
+      $('.el-dialog__headerbtn').click()
+      cy.get('.el-dialog__title').should(title => {
+        // Only second dialog should be displayed
+        expect(title).to.have.length(1)
+        expect(title).to.contain('Dialog 2')
+      })
     })
   })
 })
