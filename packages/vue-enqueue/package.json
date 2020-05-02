@@ -1,6 +1,6 @@
 {
-  "name": "vue-columns",
-  "description": "Vue renderless functional component to dispatch children items in columns",
+  "name": "vue-enqueue",
+  "description": "Vue renderless functional component to dispatch children items in enqueue",
   "version": "0.0.2",
   "author": {
     "name": "Nico Prat",
@@ -10,12 +10,12 @@
     "vue",
     "vuejs",
     "plugin",
-    "columns"
+    "enqueue"
   ],
   "license": "MIT",
-  "main": "dist/vue-columns.umd.js",
-  "module": "dist/vue-columns.esm.js",
-  "unpkg": "dist/vue-columns.min.js",
+  "main": "dist/vue-enqueue.umd.js",
+  "module": "dist/vue-enqueue.esm.js",
+  "unpkg": "dist/vue-enqueue.min.js",
   "scripts": {
     "build": "NODE_ENV=production npm run build:browser && npm run build:es && npm run build:umd",
     "build:browser": "rollup --config build/rollup.config.browser.js",
@@ -28,13 +28,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nicooprat/vue-columns.git",
-    "directory": "packages/vue-columns"
+    "url": "git+https://github.com/nicooprat/vue-enqueue.git",
+    "directory": "packages/vue-enqueue"
   },
   "bugs": {
-    "url": "https://github.com/nicooprat/vue-columns/issues"
+    "url": "https://github.com/nicooprat/vue-enqueue/issues"
   },
-  "homepage": "https://github.com/nicooprat/vue-columns#readme",
+  "homepage": "https://github.com/nicooprat/vue-enqueue#readme",
   "publishConfig": {
     "access": "public"
   },

@@ -42,18 +42,18 @@ jobs:
 
     - name: Install
       run: |
-        cd packages/vue-columns
+        cd packages/vue-enqueue
         npm ci
 
     # Runs a single command using the runners shell
     - name: Lint
       run: |
-        cd packages/vue-columns
+        cd packages/vue-enqueue
         npm run lint
 
-    - name: Build vue-columns
+    - name: Build vue-enqueue
       run: |
-        cd packages/vue-columns
+        cd packages/vue-enqueue
         npm run build
 
     # Runs a set of commands using the runners shell

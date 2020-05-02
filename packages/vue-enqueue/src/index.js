@@ -1,12 +1,12 @@
-import Columns from './Columns.vue'
+import Enqueue from './Enqueue.vue'
 
 export {
-  Columns,
+  Enqueue,
 }
 
 function registerComponents (Vue, prefix) {
-  Vue.component(`${prefix}columns`, Columns)
-  Vue.component(`${prefix}Columns`, Columns)
+  Vue.component(`${prefix}enqueue`, Enqueue)
+  Vue.component(`${prefix}Enqueue`, Enqueue)
 }
 
 const plugin = {

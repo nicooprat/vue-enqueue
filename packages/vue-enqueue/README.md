@@ -1,4 +1,4 @@
-<img src="./packages/docs/src/.vuepress/public/vue-enqueue.svg" alt="logo" width="128">
+<img src="../docs/src/.vuepress/public/vue-enqueue.svg" alt="logo" width="128">
 
 # vue-enqueue
 
@@ -30,7 +30,3 @@ export default {
 }
 </script>
 ```
-
-## Thanks & credits
-
-This repo is based on @Akryum https://github.com/Akryum/vue-mention.

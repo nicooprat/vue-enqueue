@@ -1,9 +1,9 @@
 {
-  "name": "vue-columns-monorepo",
+  "name": "vue-enqueue-monorepo",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "packages/vue-columns"
+    "packages/vue-enqueue"
   ],
   "scripts": {
     "build": "lerna run build",

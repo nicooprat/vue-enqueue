@@ -4,8 +4,8 @@ import { terser } from 'rollup-plugin-terser'
 const config = Object.assign({}, base, {
   output: {
     exports: 'named',
-    name: 'VueColumns',
-    file: 'dist/vue-columns.min.js',
+    name: 'VueEnqueue',
+    file: 'dist/vue-enqueue.min.js',
     format: 'iife',
     sourcemap: true,
   },

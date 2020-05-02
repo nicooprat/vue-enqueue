@@ -1,11 +1,11 @@
 const { $, _ } = Cypress
 
-describe('defaults behavior with 3 columns', () => {
+describe('defaults behavior with 3 enqueue', () => {
   beforeEach(() => {
     cy.visit('/defaults')
   })
 
-  it('creates right amount of columns', () => {
+  it('creates right amount of enqueue', () => {
     cy.get('.parent').should('exist').should('have.length', 1)
     cy.get('.parent > *').should('exist').should('have.length', 3)
   })
@@ -20,9 +20,9 @@ describe('defaults behavior with 3 columns', () => {
     })
   })
 
-  it('has equal columns widths', () => {
-    cy.get('.parent > *').then(($columns) => {
-      const widths = _.map($columns.get(), (column, i) => $(column).width())
+  it('has equal enqueue widths', () => {
+    cy.get('.parent > *').then(($enqueue) => {
+      const widths = _.map($enqueue.get(), (column, i) => $(column).width())
       expect(_.uniq(widths).length).to.eq(1)
     })
   })

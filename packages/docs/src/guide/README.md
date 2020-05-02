@@ -2,29 +2,29 @@
 
 ## Installation
 
-Install the `vue-columns` package:
+Install the `vue-enqueue` package:
 
 ```sh
-npm i vue-columns
+npm i vue-enqueue
 ```
 
 Or
 
 ```sh
-yarn add vue-columns
+yarn add vue-enqueue
 ```
 
 ## Quick start
 
-Import the `Columns` component from `vue-columns`:
+Import the `Enqueue` component from `vue-enqueue`:
 
 ```vue{2,6}
 <script>
-import { Columns } from 'vue-columns'
+import { Enqueue } from 'vue-enqueue'
 
 export default {
   components: {
-    Columns,
+    Enqueue,
   },
 }
 </script>
