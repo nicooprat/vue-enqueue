@@ -15,7 +15,7 @@ features:
 footer: MIT Licensed | Copyright © 2020-present Nico Prat
 ---
 
-This renderless component simply render its children in the order they've been mounted with content. It can be useful to chain up dialogs instead of stacking them for instance.
+This renderless component simply renders its slot in the order they've been mounted. It can be useful to chain up dialogs instead of stacking them for instance. It's a good way to be sure **rendering order is preserved** and multiple **children will never be rendered at the same time**, without adding any logic in your code.
 
 ## Demo
 
