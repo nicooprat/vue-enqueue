@@ -1,5 +1,3 @@
-const { $, _ } = Cypress
-
 describe('defaults behavior with 2 enqueued components', () => {
   beforeEach(() => {
     cy.visit('/defaults')

@@ -1,5 +1,3 @@
-const { $, _ } = Cypress
-
 describe('namespaced queues', () => {
   beforeEach(() => {
     cy.visit('/namespace')
