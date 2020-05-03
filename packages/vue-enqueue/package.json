@@ -1,7 +1,7 @@
 {
   "name": "vue-enqueue",
   "description": "Vue renderless functional component to dispatch children items in enqueue",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "author": {
     "name": "Nico Prat",
     "email": "nicooprat@gmail.com"
